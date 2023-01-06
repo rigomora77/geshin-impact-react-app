@@ -29,11 +29,11 @@ const Home = () => {
       
       <SimpleGrid
         spacing={4}
-        templateColumns='repeat(auto-fill, minmax(350px, 4fr))'
+        templateColumns='repeat(auto-fill, minmax(300px, 4fr))'
       >
         {characters != null ? (characters.map((character) => (
-          <Container key={character} maxW='350px'>
-          <Card bg='gray.100' w='350px' h='600px' align='center'>
+          <Container key={character} maxW='300px'>
+          <Card bg='gray.100' w='280px' h='600px' align='center'>
             <CardHeader>
               <Heading
                 fontFamily='unset'
