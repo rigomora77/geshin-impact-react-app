@@ -3,6 +3,7 @@ import CharacterList from './components/CharacterList';
 import CharacterItem from './components/CharacterItem';
 import NavBar from './components/NavBar';
 import HomePage from './components/HomePage';
+import Styles from '../src/App.css'
 
 export default function App() {
 

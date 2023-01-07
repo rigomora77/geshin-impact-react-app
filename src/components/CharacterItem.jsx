@@ -70,7 +70,7 @@ const Character = () => {
             </CardBody>
             <CardFooter>
             <Button leftIcon={<ArrowBackIcon />} variant='ghost' colorScheme='blue'>
-            <Link href={'/character'}>
+            <Link style={{ textDecoration: 'none' }} href={'/character'}>
               Regresar a lista de personajes
             </Link>
             </Button>

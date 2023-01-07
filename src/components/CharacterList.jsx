@@ -23,11 +23,11 @@ const Home = () => {
 
   return (
     <>
-      <Heading align='center' color='gray.500' margin='20px'>
+      <Heading align='center' color='brand.primary' margin='20px'>
         Lista de Personajes Genshin Impact
       </Heading>
       
-      <SimpleGrid
+      <SimpleGrid 
         spacing={4}
         templateColumns='repeat(auto-fill, minmax(300px, 4fr))'
       >
@@ -57,7 +57,7 @@ const Home = () => {
             <CardFooter>
               <Button size='md' variant='solid' colorScheme='facebook'>
                 <Text color='white'>
-                  <Link href={`/character/${character}`}>
+                  <Link style={{ textDecoration: 'none' }} href={`/character/${character}`}>
                     Detalles del personaje
                   </Link>
                 </Text>

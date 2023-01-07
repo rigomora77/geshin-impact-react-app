@@ -11,17 +11,23 @@ import {
   Wrap,
   WrapItem,
 } from '@chakra-ui/react';
-import MainPhoto from '../assets/Genshin_main.jpg';
 
 function HomePage() {
   return (
     <>
-      <Box w='100%' padding={10}>
-        <strong>Genshin Impact</strong> es un videojuego de rol de acción de
-        mundo abierto y gratuito, con una mecánica de monetización de gacha para
-        conseguir elementos adicionales como personajes especiales y armas. Es
-        el quinto videojuego desarrollado por HoYoverse (conocido como miHoYo en
-        China), tras los 3 juegos principales de la serie Honkai: Houkai Gakuen
+      <Box
+        w='100%'
+        padding='10'
+        fontFamily='unset'
+        fontSize='1.1rem'
+        fontWeight='semibold'
+        opacity={0.9}
+      >
+        Genshin Impact es un videojuego de rol de acción de mundo abierto y
+        gratuito, con una mecánica de monetización de gacha para conseguir
+        elementos adicionales como personajes especiales y armas. Es el quinto
+        videojuego desarrollado por HoYoverse (conocido como miHoYo en China),
+        tras los 3 juegos principales de la serie Honkai: Houkai Gakuen
         (Zombiegal Kawaii), Houkai Gakuen 2 (Gun Girl Z) y Honkai Impact 3rd, y
         Tears of Themis. Genshin Impact fue lanzado oficialmente a nivel mundial
         el 28 de septiembre de 2020, y se encuentra disponible en las
@@ -31,15 +37,21 @@ function HomePage() {
 
       <Wrap padding='4' spacing='60px' justify='center' h='100%'>
         <WrapItem>
-          <Card w='280px' h='450px'>
+          <Card bg='gray.100' w='280px' h='480px' opacity={0.8}>
             <CardHeader>
-              <Heading size='md' align='center'>
+              <Heading
+                size='md'
+                align='center'
+                fontFamily='unset'
+                color='gray.600'
+                textTransform='uppercase'
+              >
                 {' '}
                 Personajes
               </Heading>
             </CardHeader>
             <CardBody>
-              <Text align='center'>
+              <Text align='center' fontFamily='unset' fontSize='1rem'>
                 Genshin impact cuenta con un particular sistema de construcción
                 de personajes, donde se le podrán equipar el arma
                 correspondiente, y un total de 5 artefactos, que se componen en
@@ -55,7 +67,7 @@ function HomePage() {
                 colorScheme='facebook'
               >
                 <Text>
-                  <Link href={`/character/`}>Lista personajes</Link>
+                  <Link style={{ textDecoration: 'none' }} href={`/character/`}>Lista personajes</Link>
                 </Text>
               </Button>
             </CardFooter>
@@ -63,18 +75,23 @@ function HomePage() {
         </WrapItem>
 
         <WrapItem>
-          <Card w='280px' h='450px'>
+          <Card bg='gray.100' w='280px' h='480px' opacity={0.8}>
             <CardHeader>
-              <Heading size='md' align='center'>
+              <Heading
+                size='md'
+                align='center'
+                fontFamily='unset'
+                color='gray.600'
+                textTransform='uppercase'
+              >
                 Armas
               </Heading>
             </CardHeader>
             <CardBody>
-              <Text align='center'>
-                Se equipan para ayudar al jugador durante sus misiones al
-                infligir daño a los enemigos. Existen 5 tipos diferentes de
-                armas en Genshin Impact, y cada personaje puede usar sólo un
-                tipo. Al igual que los personajes, las armas ganan experiencia e
+              <Text align='center' fontFamily='unset' fontSize='1rem'>
+                Ayudan al jugador durante sus misiones al infligir daño a los
+                enemigos. Existen 5 tipos diferentes de armas y cada personaje
+                puede usar sólo un tipo. Las armas ganan experiencia e
                 incrementan su nivel al consumir otras armas o usando materiales
                 para mejorarlas
               </Text>
@@ -87,7 +104,7 @@ function HomePage() {
                 colorScheme='facebook'
               >
                 <Text>
-                  <Link href={`/character/`}>Lista de armas</Link>
+                  <Link style={{ textDecoration: 'none' }} href={`/character/`}>Lista de armas</Link>
                 </Text>
               </Button>
             </CardFooter>
@@ -95,16 +112,22 @@ function HomePage() {
         </WrapItem>
 
         <WrapItem>
-          <Card w='280px' h='450px'>
+          <Card bg='gray.100' w='280px' h='480px' opacity={0.8}>
             <CardHeader>
-              <Heading size='md' align='center'>
+              <Heading
+                size='md'
+                align='center'
+                fontFamily='unset'
+                color='gray.600'
+                textTransform='uppercase'
+              >
                 {' '}
                 Contacto
               </Heading>
             </CardHeader>
 
             <CardBody>
-              <Text mt='30px' align='center'>
+              <Text align='center' fontFamily='unset' fontSize='1rem'>
                 Esta página es requisito para finalizar un BootCamp de React
                 através de CódigoFacilito, cualquier recomendación, sugerencia o
                 crítica constructiva será muy bien recibida por este medio.
@@ -120,7 +143,7 @@ function HomePage() {
                 colorScheme='facebook'
               >
                 <Text>
-                  <Link href={`/character`}>Formulario</Link>
+                  <Link style={{ textDecoration: 'none' }} href={`/character`}>Formulario</Link>
                 </Text>
               </Button>
             </CardFooter>
