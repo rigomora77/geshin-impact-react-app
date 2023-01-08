@@ -2,19 +2,11 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { SkillTalents } from '../services/launches';
 import {
-  Container,
   Card,
-  SimpleGrid,
   CardHeader,
-  Image,
-  Link,
   CardBody,
   Heading,
   Text,
-  Button,
-  CardFooter,
-  Stack,
-  StackDivider,
   Box,
   Badge,
 } from '@chakra-ui/react';

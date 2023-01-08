@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getAllCharacters, API_BASE } from '../services/launches';
+import { getAllWeapons, API_BASE } from '../services/launches';
 import {
   Container,
   Center,
@@ -15,25 +15,25 @@ import {
   CardFooter,
 } from '@chakra-ui/react';
 
-const CharacterList = () => {
-  const [characters, setCharacters] = useState(null);
+const WeaponList = () => {
+  const [weapons, setWeapons] = useState(null);
 
   useEffect(() => {
-    getAllCharacters(setCharacters);
+    getAllWeapons(setWeapons);
   }, []);
 
   return (
     <>
       <Heading align='center' color='brand.primary' margin='20px'>
-        Lista de Personajes Genshin Impact
+        Lista de Armas Genshin Impact
       </Heading>
       
       <SimpleGrid 
         spacing={4}
         templateColumns='repeat(auto-fill, minmax(300px, 4fr))'
       >
-        {characters != null ? (characters.map((character) => (
-          <Container key={character} maxW='300px'>
+        {weapons != null ? (weapons.map((weapon) => (
+          <Container key={weapon} maxW='300px'>
           <Card bg='gray.100' w='280px' h='600px' align='center'>
             <CardHeader>
               <Heading
@@ -42,7 +42,7 @@ const CharacterList = () => {
                 textTransform='uppercase'
                 color='gray.600'
               >
-                {character}
+                {weapon}
               </Heading>
             </CardHeader>
 
@@ -50,7 +50,7 @@ const CharacterList = () => {
               <Image
                 borderRadius='lg'
                 width={200}
-                src={API_BASE + '/characters' + `/${character}/card`}
+                src={API_BASE + '/weapons' + `/${weapon}/icon`}
                 alt=''
               />
             </CardBody>
@@ -58,8 +58,8 @@ const CharacterList = () => {
             <CardFooter>
               <Button size='md' variant='solid' colorScheme='facebook'>
                 <Text color='white'>
-                  <Link style={{ textDecoration: 'none' }} href={`/character/${character}`}>
-                    Detalles del personaje
+                  <Link style={{ textDecoration: 'none' }} href={`/weapon/${weapon}`}>
+                    Detalles del arma
                   </Link>
                 </Text>
               </Button>
@@ -77,4 +77,4 @@ const CharacterList = () => {
   );
 };
 
-export default CharacterList;
+export default WeaponList;

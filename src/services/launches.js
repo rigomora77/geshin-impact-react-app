@@ -1,25 +1,44 @@
 import axios from 'axios';
 
-const API_BASE = 'https://api.genshin.dev/characters'
+const API_BASE = 'https://api.genshin.dev'
+
 
 const getAllCharacters = async (state) => {
-  const response = await axios.get(API_BASE)
-  state(response.data)  
+  try {
+    const response = await axios.get(API_BASE + '/characters')
+    state(response.data)
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 const CharacterItem = async (character, state) => {
-  const response = await axios.get(API_BASE + `/${character}?lang=es`)
-  state(response.data)  
+  try {
+    const response = await axios.get(API_BASE + '/characters' + `/${character}?lang=es`)
+    state(response.data)
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 const SkillTalents = async (character, state) => {
-  const response = await axios.get(API_BASE + `/${character}?lang=es`)
-  state(response.data.skillTalents)  
+  const response = await axios.get(API_BASE + '/characters' + `/${character}?lang=es`)
+  state(response.data.skillTalents)
+}
+
+const getAllWeapons = async (state) => {
+  try {
+    const response = await axios.get(API_BASE + '/weapons')
+    state(response.data)
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 export {
   getAllCharacters,
   CharacterItem,
   SkillTalents,
+  getAllWeapons,
   API_BASE
 }

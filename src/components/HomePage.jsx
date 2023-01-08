@@ -104,7 +104,7 @@ function HomePage() {
                 colorScheme='facebook'
               >
                 <Text>
-                  <Link style={{ textDecoration: 'none' }} href={`/character/`}>Lista de armas</Link>
+                  <Link style={{ textDecoration: 'none' }} href={`/weapon/`}>Lista de armas</Link>
                 </Text>
               </Button>
             </CardFooter>
