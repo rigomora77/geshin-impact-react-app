@@ -29,9 +29,20 @@ const SkillTalents = async (character, state) => {
 const getAllWeapons = async (state) => {
   try {
     const response = await axios.get(API_BASE + '/weapons')
-    state(response.data)
+    state(response.data)    
   } catch (error) {
     console.error(error);
+  }
+}
+
+const WeaponItem = async (item, state) => {
+  try {
+    const response = await axios.get(API_BASE + '/weapons' + `/${item}`)
+    state(response.data)
+    console.log(response.data)
+    
+  } catch (error) {
+    console.error(error)
   }
 }
 
@@ -40,5 +51,6 @@ export {
   CharacterItem,
   SkillTalents,
   getAllWeapons,
+  WeaponItem,
   API_BASE
 }
