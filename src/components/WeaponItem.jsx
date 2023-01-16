@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { WeaponItem } from '../services/launches';
+import { WeaponItem, API_BASE } from '../services/launches';
 import {
   Card,
   Center,
@@ -27,17 +27,57 @@ const Weapon = () => {
   return (
     <>
       {weapon != null ? (
-        
-        <Card>
-          <Text>{params.id}</Text>
-          <Text>{weapon.type}</Text>
-          <Text>{weapon.rarity}</Text>
-          <Text>{weapon.baseAttack}</Text>
-          <Text>{weapon.passiveName}</Text>
-          <Text>{weapon.passiveDesc}</Text>
-          <Text>{weapon.location}</Text>
+        <Card
+          size='lg'
+          direction={{ base: 'column', sm: 'row' }}
+          overflow='hidden'
+          variant='outline'
+          bg='gray.100'
+          margin={10}
+          padding='6'
+        >
+          <Stack>
+            <Heading
+              fontFamily='unset'
+              textTransform='uppercase'
+              color='gray.600'
+              marginTop={4}
+              marginBottom={8}
+            >
+              {params.id}
+            </Heading>
+            <Text marginBottom={2}>
+              <strong>Tipo:</strong> {weapon.type}
+            </Text>
+            <Text marginBottom={2}>
+              <strong>Rareza:</strong> {weapon.rarity}
+            </Text>
+            <Text marginBottom={2}>
+              <strong>Ataque base:</strong> {weapon.baseAttack}
+            </Text>
+            <Text marginBottom={2}>
+              <strong>Habilidad pasiva:</strong> {weapon.passiveName}
+            </Text>
+            <Text marginBottom={2}>
+              <strong>Descripción Habilidad:</strong>
+              {weapon.passiveDesc}
+            </Text>
+            <Text marginBottom={2}>
+              <strong>Obtención:</strong> {weapon.location}
+            </Text>
+            <CardFooter>
+              <Button
+                leftIcon={<ArrowBackIcon />}
+                variant='ghost'
+                colorScheme='blue'
+              >
+                <Link style={{ textDecoration: 'none' }} href={'/weapon'}>
+                  Regresar a lista de armas
+                </Link>
+              </Button>
+            </CardFooter>
+          </Stack>
         </Card>
-        
       ) : (
         <Card>
           <Center padding='6'>

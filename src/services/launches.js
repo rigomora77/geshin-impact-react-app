@@ -38,8 +38,7 @@ const getAllWeapons = async (state) => {
 const WeaponItem = async (item, state) => {
   try {
     const response = await axios.get(API_BASE + '/weapons' + `/${item}`)
-    state(response.data)
-    console.log(response.data)
+    state(response.data)    
     
   } catch (error) {
     console.error(error)

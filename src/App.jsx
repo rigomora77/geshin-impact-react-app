@@ -5,7 +5,8 @@ import WeaponList from './components/WeaponList'
 import NavBar from './components/NavBar'
 import HomePage from './components/HomePage'
 import Weapon from './components/WeaponItem'
-import Styles from '../src/App.css'
+import '../src/App.css'
+import ContactForm from './components/ContactForm'
 
 export default function App() {
 
@@ -19,6 +20,7 @@ export default function App() {
           <Route path='character/:id'element={<CharacterItem></CharacterItem>}></Route>
           <Route path='/weapon' element={<WeaponList></WeaponList>}></Route>
           <Route path='/weapon/:id' element={<Weapon></Weapon>}></Route>
+          <Route path='/contact' element={<ContactForm></ContactForm>}></Route>
         </Routes>
         </BrowserRouter>             
     </>

@@ -143,7 +143,7 @@ function HomePage() {
                 colorScheme='facebook'
               >
                 <Text>
-                  <Link style={{ textDecoration: 'none' }} href={`/character`}>Formulario</Link>
+                  <Link style={{ textDecoration: 'none' }} href={`/contact`}>Formulario</Link>
                 </Text>
               </Button>
             </CardFooter>

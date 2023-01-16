@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getAllWeapons } from '../services/launches';
-import Weapon from './WeaponItem';
+import { getAllWeapons, API_BASE } from '../services/launches';
 import {
   Container,
   Center,
@@ -15,6 +14,7 @@ import {
   Button,
   CardFooter,
 } from '@chakra-ui/react';
+import PaimonBuild from '../assets/paimon_build.png';
 
 const WeaponList = () => {
   const [weapons, setWeapons] = useState(null);
@@ -36,7 +36,7 @@ const WeaponList = () => {
         {weapons != null
           ? weapons.map((weapon) => (
               <Container key={weapon} maxW='300px'>
-                <Card bg='gray.100' w='280px' h='280px' align='center'>
+                <Card bg='gray.100' w='280px' h='350px' align='center'>
                   <CardHeader
                     align='center'
                     color='brand.primary'
@@ -54,9 +54,16 @@ const WeaponList = () => {
                   </CardHeader>
 
                   <CardBody>
-                    <Text>
-                                           
-                    </Text>
+                  <Image
+                borderRadius='lg'
+                width={100}
+                height={100}
+                src= {API_BASE + '/weapons' + `/${weapon}/icon`} 
+                onError = {e => e.target.src = PaimonBuild}
+                
+                          
+                // alt='Dibujo de las diferentes armas disponibles en Genshin Impacto'
+              />
                   </CardBody>
 
                   <CardFooter>
