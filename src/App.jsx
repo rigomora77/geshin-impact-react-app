@@ -13,16 +13,16 @@ export default function App() {
   return (
     <>
       <NavBar/>
-      <BrowserRouter>      
-        <Routes>          
-          <Route path='/' element={<HomePage></HomePage>}></Route>
-          <Route path='/character' element={<CharacterList></CharacterList>}></Route>
-          <Route path='character/:id'element={<CharacterItem></CharacterItem>}></Route>
-          <Route path='/weapon' element={<WeaponList></WeaponList>}></Route>
-          <Route path='/weapon/:id' element={<Weapon></Weapon>}></Route>
-          <Route path='/contact' element={<ContactForm></ContactForm>}></Route>
-        </Routes>
-        </BrowserRouter>             
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<HomePage></HomePage>}></Route>
+            <Route path='/character' element={<CharacterList></CharacterList>}></Route>
+            <Route path='character/:id'element={<CharacterItem></CharacterItem>}></Route>
+            <Route path='/weapon' element={<WeaponList></WeaponList>}></Route>
+            <Route path='/weapon/:id' element={<Weapon></Weapon>}></Route>
+            <Route path='/contact' element={<ContactForm></ContactForm>}></Route>  
+          </Routes>          
+        </BrowserRouter>        
     </>
   )
 }
